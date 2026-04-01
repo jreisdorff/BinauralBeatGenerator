@@ -40,16 +40,16 @@ On a **stiff plate** driven at a resonance, **sand or powder** collects on **nod
 
 ## 3. Archaeoacoustics (selected, cautious)
 
-Researchers have measured **clap echoes**, **reverberation**, and **transmission** at some prehistoric and historic sites (e.g. certain **chambers**, **caves**, **theaters**). Interpretations vary: **intentional ritual design** vs **accident of masonry** is often **not** settled. What *is* settled is that humans notice dramatic acoustics and often **reuse** them culturally.
+Researchers have measured **clap echoes**, **reverberation**, and **transmission** at some prehistoric and historic sites (e.g. certain **chambers**, **caves**, **theaters**). **intentional ritual design** What *is* settled is that humans notice dramatic acoustics and often **reuse** them culturally.
 
 ## 4. What this repository’s code does
 
 The scripts:
 
 1. **`roomModes`** — Lists low **rectangular room modes** so you can see how **geometry picks frequencies** (related to real studio/acoustics work, not to levitation).
-2. **`chladniApprox`** — Draws a **crude 2D nodal pattern** for a simply supported square plate mode \((n,m)\). Good for **intuition**; not a full elastic-plate FEM model.
+2. **`chladniApprox`** — Draws a **crude 2D nodal pattern** for a simply supported square plate mode \((n,m)\). Good for **intuition**.
 
-Use them to **explore** “how could a *space* or *plate* respond to tones?”—the same class of physics people sometimes gesture at when they talk about **“sound-shaped”** spaces—without claiming unsupported history.
+Use them to **explore** “how could a *space* or *plate* respond to tones?”
 
 ## 5. Further reading (mainstream)
 
