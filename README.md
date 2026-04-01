@@ -1,4 +1,4 @@
-# AncientMusic
+# Random Music Project
 
 Small tools around **Old Babylonian / Mesopotamian tuning theory** (see `docs/philology-iraq-sources.md`). This is a modern reconstruction for sound experiments—not a claim that the tablets specify Hz.
 
