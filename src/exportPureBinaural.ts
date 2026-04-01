@@ -1,5 +1,5 @@
 /**
- * Pure binaural-beat WAV (one sine per ear). Use headphones.
+ * Pure binaural-beat WAV (one sin(e) per ear). Use headphones.
  *
  * Env (all optional except you usually set BEAT_HZ / CARRIER_HZ to taste):
  *   CARRIER_HZ   default 220   — lower ear gets this (unless SWAP_EARS=1)

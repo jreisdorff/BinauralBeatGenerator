@@ -1,9 +1,9 @@
 {
-  "name": "ancient-music",
+  "name": "soundlab",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Old Babylonian tuning / modulation model grounded in Iraq journal philology (UET VI/3 899, BM 65217+66616, UET VII 74 tradition).",
+  "description": "SoundLab — Mesopotamian tuning philology, binaural demos, acoustics (Iraq journal corpus, UET VII 74, presets).",
   "scripts": {
     "start": "tsx src/index.ts",
     "build": "tsc",
@@ -11,7 +11,13 @@
     "midi:tightening": "tsx src/playTighteningCycle.ts",
     "audio:binaural": "tsx src/exportTighteningBinaural.ts",
     "audio:beat": "tsx src/exportPureBinaural.ts",
-    "audio:preset": "tsx src/runPreset.ts"
+    "audio:preset": "tsx src/runPreset.ts",
+    "audio:preset:all": "tsx src/runAllPresets.ts",
+    "acoustics:demo": "tsx src/runAcousticsDemo.ts",
+    "web:install": "npm install --prefix web",
+    "web:dev": "npm run dev --prefix web",
+    "web:build": "npm run build --prefix web",
+    "web:copy-assets": "npm run copy-assets --prefix web"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

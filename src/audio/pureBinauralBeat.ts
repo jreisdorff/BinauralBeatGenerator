@@ -1,5 +1,5 @@
 /**
- * Single pair of sine carriers: one frequency per ear. Perceived beat rate ≈ |f_R − f_L|
+ * Single pair of sin(e) carriers: one frequency per ear. Perceived beat rate ≈ |f_R − f_L|
  * when listened to on headphones (classic binaural beat).
  *
  * Optional linear sweep of the interaural difference over time (explore many beat rates in one file).

@@ -1,0 +1,5 @@
+node_modules/
+dist/
+public/audio/*.wav
+public/audio/*.mid
+public/images/chladni-*.svg

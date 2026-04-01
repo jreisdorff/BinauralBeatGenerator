@@ -8,6 +8,9 @@ These JSON files drive **`npm run audio:preset`**. They are **not** from Old Bab
 # list ids if you omit PRESET (script prints available names)
 PRESET=solfeggio-528 npm run audio:preset
 PRESET=a432-carrier-6hz-beat OPEN_WAV=1 npm run audio:preset
+
+# render all presets/*.json → out/
+npm run audio:preset:all
 ```
 
 Env vars **override** the JSON when set (same as `audio:beat`): `CARRIER_HZ`, `BEAT_HZ`, `BEAT_END`, `DURATION_SEC`, `SAMPLE_RATE`, `AMPLITUDE`, `FADE_SEC`, `SWAP_EARS`, `OUT`, `OPEN_WAV`.
@@ -32,6 +35,6 @@ Copy an existing file, change the values, save as `presets/my-name.json`, then `
 - **a432-carrier-6hz-beat** — 432 Hz reference + modest beat  
 - **solfeggio-396 / 528 / 852** — common list frequencies (wellness literature)  
 - **solfeggio-beat-sweep** — fixed 528 Hz carrier, beat sweeps down  
-- **chakra-folklore-root / heart** — illustrative Hz from typical web tables, clearly labeled folklore  
+- **chakra--root / heart** — illustrative Hz from typical web tables, clearly labeled   
 
 **Headphones required** for the binaural effect.

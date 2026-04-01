@@ -1,11 +1,11 @@
-# Random Music Project
+# SoundLab
 
 Small tools around **Old Babylonian / Mesopotamian tuning theory** (see `docs/philology-iraq-sources.md`). This is a modern reconstruction for sound experiments—not a claim that the tablets specify Hz.
 
 ## Setup
 
 ```bash
-cd AncientMusic
+# from this repository’s root
 npm install
 ```
 
@@ -16,6 +16,23 @@ Print a text summary (corpus, heptachords, modulation, file hints):
 ```bash
 npm start
 ```
+
+## React explorer (scroll page + players)
+
+Single-page app in **`web/`** — sections for Babylonian tuning, binaural/presets, and acoustics, with **Framer Motion** scroll reveals, themed CSS (Egyptian palette, mandala layers, triangular mesh), and **`<audio>`** players.
+
+```bash
+npm run web:install          # once
+npm run web:dev              # http://localhost:5173
+```
+
+Copy generated samples from the repo `out/` folder into `web/public/` (after you’ve run the WAV/MIDI/SVG commands above):
+
+```bash
+npm run web:copy-assets
+```
+
+Use **headphones** for binaural tracks. Production build: `npm run web:build`.
 
 ## MIDI (tightening cycle)
 
@@ -58,7 +75,7 @@ Output: **`out/tightening-binaural.wav`**
 
 ## WAV — pure binaural beat (explore frequencies)
 
-One sine wave in each ear; perceived pulse rate is about the **difference** between them. Good for trying carriers and beat rates outside the tightening chords.
+One sin(e) wave in each ear; perceived pulse rate is about the **difference** between them. Good for trying carriers and beat rates outside the tightening chords.
 
 ```bash
 npm run audio:beat
@@ -76,7 +93,7 @@ OUT=out/my-beat.wav npm run audio:beat
 
 **Headphones required** for the effect.
 
-## Presets (432 / “solfeggio” / chakra folklore — **not** ancient Babylon)
+## Presets (432 / “solfeggio” / chakra  — **not** ancient Babylon)
 
 JSON under **`presets/`** is explicitly **non-historical**: quick binaural experiments without mixing those ideas into the philology doc. Each file includes a **`disclaimer`** field.
 
@@ -86,6 +103,24 @@ PRESET=a432-carrier-6hz-beat npm run audio:preset
 ```
 
 Omit `PRESET` to print available ids. Same env overrides as `audio:beat` (`BEAT_HZ`, `OUT`, …). See **`presets/README.md`**.
+
+Render **every** preset JSON in one go:
+
+```bash
+npm run audio:preset:all
+```
+
+## Acoustics demo (rooms + Chladni-style SVG)
+
+Explains **sound vs built space** in plain language (evidence vs folklore) and generates **simulations**:
+
+```bash
+npm run acoustics:demo
+```
+
+Writes **`out/room-modes.txt`** (rectangular room standing-wave frequencies) and **`out/chladni-mode-*.svg`** (crude plate nodal patterns). Read **`docs/sound-and-built-environment.md`** first.
+
+Optional env: `ROOM_L_M`, `ROOM_W_M`, `ROOM_H_M`, `CHLADNI_N`, `CHLADNI_M`, `EXTRA_MODES` (e.g. `2,3|5,2`).
 
 ## Tests
 
@@ -103,3 +138,6 @@ npm test
 | `src/audio/` | Binaural WAV synthesis |
 | `out/` | Generated `.mid` / `.wav` (gitignored) |
 | `presets/` | Non-historical binaural JSON → `npm run audio:preset` |
+| `docs/sound-and-built-environment.md` | Sound, cities, archaeology: what’s real vs myth |
+| `src/acoustics/` | Room modes + Chladni-style SVG helpers |
+| `web/` | Vite + React scroll UI + audio players |

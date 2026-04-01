@@ -25,7 +25,7 @@ export function summarizePhilology(): string {
   const tightenFromIšartum = stepTighten("išartum");
 
   const lines = [
-    "AncientMusic — corpus summary (see docs/philology-iraq-sources.md)",
+    "SoundLab — corpus summary (see docs/philology-iraq-sources.md)",
     "",
     `Reference A4: ${REFERENCE_A4_HZ} Hz (modern convention only)`,
     "",
@@ -85,6 +85,9 @@ export function summarizePhilology(): string {
     "  BEAT_HZ=40 BEAT_END=1 DURATION_SEC=120 npm run audio:beat  (linear sweep)",
     "",
     "Presets (non-historical): PRESET=solfeggio-528 npm run audio:preset  (see presets/README.md)",
+    "  npm run audio:preset:all  — render every presets/*.json",
+    "",
+    "Acoustics (rooms / Chladni pedagogy): npm run acoustics:demo  → docs/sound-and-built-environment.md",
   ];
   return lines.join("\n");
 }

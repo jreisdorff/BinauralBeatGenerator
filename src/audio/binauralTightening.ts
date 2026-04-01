@@ -52,7 +52,7 @@ function fadeFirstLastFrames(
 }
 
 /**
- * Sum of sines per partial; amplitude scaled so chords stay near [-1,1].
+ * Sum of sin(e)s per partial; amplitude scaled so chords stay near [-1,1].
  */
 export function renderTighteningBinaural(
   segments: readonly TighteningScheduleSegment[],

@@ -1,0 +1,109 @@
+.mandala-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+.mandala {
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  translate: -50% -50%;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+}
+
+.mandala--1 {
+  width: min(140vw, 900px);
+  height: min(140vw, 900px);
+  background: conic-gradient(
+    from 0deg,
+    #ff006e,
+    #ffbe0b,
+    #8338ec,
+    #3a86ff,
+    #06ffa5,
+    #ff006e
+  );
+  animation: mandala-spin var(--m-d1, 24s) linear infinite;
+  opacity: 0.35;
+  filter: blur(2px);
+}
+
+.mandala--2 {
+  width: min(95vw, 620px);
+  height: min(95vw, 620px);
+  background: repeating-conic-gradient(
+    from 45deg,
+    #ff00aa 0deg 12deg,
+    transparent 12deg 24deg
+  );
+  animation: mandala-spin-rev var(--m-d2, 18s) linear infinite;
+  opacity: 0.25;
+}
+
+.mandala--3 {
+  width: min(70vw, 480px);
+  height: min(70vw, 480px);
+  background: radial-gradient(
+      circle,
+      transparent 30%,
+      rgba(255, 200, 0, 0.15) 31%,
+      transparent 32%
+    ),
+    repeating-conic-gradient(
+      from 0deg,
+      rgba(0, 255, 200, 0.2) 0deg 8deg,
+      transparent 8deg 16deg
+    );
+  animation: mandala-spin var(--m-d3, 32s) linear infinite;
+  opacity: 0.4;
+}
+
+.mandala--4 {
+  width: min(50vw, 340px);
+  height: min(50vw, 340px);
+  border: 3px dashed rgba(255, 255, 255, 0.25);
+  animation: mandala-pulse 4s ease-in-out infinite;
+}
+
+.mandala--5 {
+  width: min(120vw, 720px);
+  height: min(120vw, 720px);
+  background: repeating-radial-gradient(
+    circle at center,
+    rgba(131, 56, 236, 0.12) 0px,
+    rgba(131, 56, 236, 0.12) 14px,
+    transparent 14px,
+    transparent 28px
+  );
+  animation: mandala-spin-rev calc(var(--m-d1, 24s) * 1.4) linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes mandala-spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes mandala-spin-rev {
+  to {
+    rotate: -360deg;
+  }
+}
+
+@keyframes mandala-pulse {
+  0%,
+  100% {
+    scale: 1;
+    opacity: 0.5;
+  }
+  50% {
+    scale: 1.06;
+    opacity: 0.85;
+  }
+}
