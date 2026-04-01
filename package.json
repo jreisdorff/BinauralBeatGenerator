@@ -1,0 +1,24 @@
+{
+  "name": "ancient-music",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Old Babylonian tuning / modulation model grounded in Iraq journal philology (UET VI/3 899, BM 65217+66616, UET VII 74 tradition).",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "test": "vitest run",
+    "midi:tightening": "tsx src/playTighteningCycle.ts",
+    "audio:binaural": "tsx src/exportTighteningBinaural.ts",
+    "audio:beat": "tsx src/exportPureBinaural.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "dependencies": {
+    "midi-writer-js": "^3.2.1"
+  }
+}
