@@ -10,7 +10,8 @@
     "test": "vitest run",
     "midi:tightening": "tsx src/playTighteningCycle.ts",
     "audio:binaural": "tsx src/exportTighteningBinaural.ts",
-    "audio:beat": "tsx src/exportPureBinaural.ts"
+    "audio:beat": "tsx src/exportPureBinaural.ts",
+    "audio:preset": "tsx src/runPreset.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

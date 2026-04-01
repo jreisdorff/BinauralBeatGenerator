@@ -1,0 +1,8 @@
+{
+  "title": "432 Hz carrier + 6 Hz binaural offset",
+  "disclaimer": "Not from Mesopotamian tablets. A4-style reference pitch is a modern choice; the beat is the interaural difference only.",
+  "carrierHz": 432,
+  "beatHz": 6,
+  "durationSec": 180,
+  "outputFilename": "preset-a432-beat6.wav"
+}

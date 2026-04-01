@@ -83,6 +83,8 @@ export function summarizePhilology(): string {
     "Pure binaural beat (explore carrier / beat / sweep): npm run audio:beat",
     "  CARRIER_HZ=220 BEAT_HZ=6 DURATION_SEC=600 npm run audio:beat",
     "  BEAT_HZ=40 BEAT_END=1 DURATION_SEC=120 npm run audio:beat  (linear sweep)",
+    "",
+    "Presets (non-historical): PRESET=solfeggio-528 npm run audio:preset  (see presets/README.md)",
   ];
   return lines.join("\n");
 }

@@ -1,0 +1,8 @@
+{
+  "title": "Carrier 396 Hz (popular “solfeggio” list) + 6 Hz beat",
+  "disclaimer": "Modern wellness list, not medieval Guidonian solmization or cuneiform music theory.",
+  "carrierHz": 396,
+  "beatHz": 6,
+  "durationSec": 180,
+  "outputFilename": "preset-solfeggio-396.wav"
+}

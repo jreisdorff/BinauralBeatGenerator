@@ -1,0 +1,8 @@
+{
+  "title": "Carrier 852 Hz (popular “solfeggio” list) + 5 Hz beat",
+  "disclaimer": "Modern wellness list. At 48 kHz sample rate, keep carriers well below Nyquist.",
+  "carrierHz": 852,
+  "beatHz": 5,
+  "durationSec": 120,
+  "outputFilename": "preset-solfeggio-852.wav"
+}

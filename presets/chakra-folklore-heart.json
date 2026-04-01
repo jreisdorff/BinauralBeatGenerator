@@ -1,0 +1,8 @@
+{
+  "title": "Carrier 528 Hz + 5 Hz beat (often marketed with “heart” memes)",
+  "disclaimer": "Arbitrary pairing of a popular carrier with a low beat; not Ayurvedic/Tibetan source material.",
+  "carrierHz": 528,
+  "beatHz": 5,
+  "durationSec": 180,
+  "outputFilename": "preset-chakra-folklore-heart.wav"
+}

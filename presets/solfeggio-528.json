@@ -1,0 +1,8 @@
+{
+  "title": "Carrier 528 Hz (popular “solfeggio” list) + 6 Hz beat",
+  "disclaimer": "Modern wellness list, not historical tuning data from antiquity.",
+  "carrierHz": 528,
+  "beatHz": 6,
+  "durationSec": 180,
+  "outputFilename": "preset-solfeggio-528.wav"
+}

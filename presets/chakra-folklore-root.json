@@ -1,0 +1,8 @@
+{
+  "title": "Carrier ~256 Hz + 4 Hz beat (internet “root chakra” folklore)",
+  "disclaimer": "Hz-to-chakra tables are modern inventions; traditions do not specify these frequencies.",
+  "carrierHz": 256,
+  "beatHz": 4,
+  "durationSec": 180,
+  "outputFilename": "preset-chakra-folklore-root.wav"
+}

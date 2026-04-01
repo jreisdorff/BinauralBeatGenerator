@@ -1,0 +1,9 @@
+{
+  "title": "528 Hz carrier; beat sweeps 18 → 4 Hz over the duration",
+  "disclaimer": "Exploratory audio only. Sweep does not map to any ancient text in this project.",
+  "carrierHz": 528,
+  "beatHz": 18,
+  "beatHzEnd": 4,
+  "durationSec": 240,
+  "outputFilename": "preset-solfeggio-528-sweep-beat.wav"
+}

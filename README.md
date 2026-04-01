@@ -76,6 +76,17 @@ OUT=out/my-beat.wav npm run audio:beat
 
 **Headphones required** for the effect.
 
+## Presets (432 / “solfeggio” / chakra folklore — **not** ancient Babylon)
+
+JSON under **`presets/`** is explicitly **non-historical**: quick binaural experiments without mixing those ideas into the philology doc. Each file includes a **`disclaimer`** field.
+
+```bash
+PRESET=solfeggio-528 npm run audio:preset
+PRESET=a432-carrier-6hz-beat npm run audio:preset
+```
+
+Omit `PRESET` to print available ids. Same env overrides as `audio:beat` (`BEAT_HZ`, `OUT`, …). See **`presets/README.md`**.
+
 ## Tests
 
 ```bash
@@ -91,3 +102,4 @@ npm test
 | `src/midi/` | MIDI export |
 | `src/audio/` | Binaural WAV synthesis |
 | `out/` | Generated `.mid` / `.wav` (gitignored) |
+| `presets/` | Non-historical binaural JSON → `npm run audio:preset` |
