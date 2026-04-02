@@ -121,109 +121,101 @@
   }
 }
 
-/* —— Hero Earth (3D tilt + equirectangular scroll) —— */
+/* —— Hero Earth (front-facing; flat map scroll — avoids 3D-tilt distortion) —— */
 .hero-earth {
   position: relative;
-  width: min(82vw, 380px);
-  height: min(82vw, 380px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: min(72vw, 300px);
+  height: min(72vw, 300px);
 }
 
 .hero-earth__glow {
   position: absolute;
-  inset: 4%;
+  inset: -14%;
   border-radius: 50%;
   background: radial-gradient(
-    circle at 35% 30%,
-    rgba(120, 180, 255, 0.32) 0%,
-    rgba(40, 80, 160, 0.1) 42%,
-    transparent 68%
+    circle at 40% 35%,
+    rgba(130, 190, 255, 0.22) 0%,
+    rgba(50, 90, 180, 0.06) 50%,
+    transparent 72%
   );
-  filter: blur(16px);
+  filter: blur(18px);
   pointer-events: none;
-  transform: rotateX(22deg) rotateY(-20deg) rotateZ(8deg);
-  transform-origin: center center;
-}
-
-.hero-earth__pivot {
-  position: relative;
-  width: min(70vw, 300px);
-  height: min(70vw, 300px);
-  perspective: min(1100px, 140vw);
-  perspective-origin: 48% 42%;
-}
-
-.hero-earth__axis {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  /* Oblique axis: ~obliquity + orbit yaw so poles aren’t vertical on screen */
-  transform: rotateX(26deg) rotateY(-24deg) rotateZ(11deg);
-  transform-origin: center center;
 }
 
 .hero-earth__stage {
   position: relative;
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;
   border-radius: 50%;
-  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(255, 255, 255, 0.07) inset,
-    12px 0 48px rgba(0, 0, 0, 0.35);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.55));
 }
 
 .hero-earth__sphere {
   position: relative;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1;
+  height: auto;
   border-radius: 50%;
   overflow: hidden;
-  background: #0a1628;
-  backface-visibility: hidden;
-  transform: translateZ(0);
+  background: #0d1b2a;
+  isolation: isolate;
 }
 
-/* NASA Blue Marble–style composite (Wikimedia, public domain) */
+/* Two wide tiles = seamless loop; 50% width each = one full world per half of strip */
 .hero-earth__map {
   position: absolute;
   top: 0;
   left: 0;
   width: 200%;
   height: 100%;
-  background-color: #1a3a5c;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Equirectangular_projection_SW.jpg/1200px-Equirectangular_projection_SW.jpg");
+  background-color: #1b4f72;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Equirectangular_projection_SW.jpg/1600px-Equirectangular_projection_SW.jpg");
   background-size: 50% 100%;
   background-repeat: repeat-x;
-  background-position: 0 center;
-  animation: hero-earth-spin 48s linear infinite;
+  background-position: 0 50%;
+  will-change: transform;
+  animation: hero-earth-spin 56s linear infinite;
 }
 
-/* Soft day/night limb */
-.hero-earth__terminator {
+/* Sphere read: dark limb + highlight (no harsh box-shadow on texture) */
+.hero-earth__shade {
   position: absolute;
   inset: 0;
   border-radius: 50%;
   pointer-events: none;
-  box-shadow: inset -18px 0 36px rgba(0, 0, 0, 0.55),
-    inset 8px 0 24px rgba(255, 255, 255, 0.07);
+  background: radial-gradient(
+    ellipse 92% 92% at 30% 28%,
+    transparent 0%,
+    transparent 42%,
+    rgba(0, 0, 0, 0.15) 72%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  box-shadow: inset -28px 0 56px rgba(0, 0, 0, 0.5),
+    inset 10px 8px 40px rgba(255, 255, 255, 0.06);
+}
+
+/* Thin atmosphere rim */
+.hero-earth__rim {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 0 1px rgba(120, 180, 255, 0.18) inset;
 }
 
 @keyframes hero-earth-spin {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-earth__map {
     animation: none;
-    transform: translateX(-12%);
+    transform: translate3d(-15%, 0, 0);
   }
 }
 
