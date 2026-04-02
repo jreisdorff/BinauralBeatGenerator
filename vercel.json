@@ -1,6 +1,0 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "npm install && npm run web:install",
-  "buildCommand": "npm run audio:binaural && npm run audio:beat && npm run audio:preset:all && npm run midi:tightening && npm run acoustics:demo && npm run web:copy-assets && npm run web:build",
-  "outputDirectory": "web/dist"
-}
