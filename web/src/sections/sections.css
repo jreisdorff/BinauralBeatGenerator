@@ -86,6 +86,121 @@
   min-height: 100vh;
 }
 
+.hero__layout {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 3rem);
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 2rem);
+}
+
+@media (min-width: 900px) {
+  .hero__layout {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .hero__layout .hero__content {
+    flex: 1;
+    min-width: 0;
+    max-width: 520px;
+    text-align: left;
+    order: 0;
+  }
+
+  .hero__layout .hero-earth {
+    flex-shrink: 0;
+    order: 1;
+  }
+}
+
+/* —— Hero Earth (equirectangular scroll inside sphere mask) —— */
+.hero-earth {
+  position: relative;
+  width: min(72vw, 320px);
+  height: min(72vw, 320px);
+}
+
+.hero-earth__glow {
+  position: absolute;
+  inset: -12%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    rgba(120, 180, 255, 0.25) 0%,
+    rgba(40, 80, 160, 0.08) 45%,
+    transparent 70%
+  );
+  filter: blur(12px);
+  pointer-events: none;
+}
+
+.hero-earth__stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+}
+
+.hero-earth__sphere {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #0a1628;
+}
+
+/* NASA Blue Marble–style composite (Wikimedia, public domain) */
+.hero-earth__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-color: #1a3a5c;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Equirectangular_projection_SW.jpg/1200px-Equirectangular_projection_SW.jpg");
+  background-size: 50% 100%;
+  background-repeat: repeat-x;
+  background-position: 0 center;
+  animation: hero-earth-spin 48s linear infinite;
+}
+
+/* Soft day/night limb */
+.hero-earth__terminator {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: inset -18px 0 36px rgba(0, 0, 0, 0.55),
+    inset 8px 0 24px rgba(255, 255, 255, 0.07);
+}
+
+@keyframes hero-earth-spin {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-earth__map {
+    animation: none;
+    transform: translateX(-12%);
+  }
+}
+
 .section--hero__bg {
   position: absolute;
   inset: 0;
@@ -105,6 +220,7 @@
 .hero__content {
   text-align: center;
   max-width: 640px;
+  width: 100%;
 }
 
 .hero__eyebrow {
