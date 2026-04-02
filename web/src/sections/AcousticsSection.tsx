@@ -134,7 +134,7 @@ export function AcousticsSection() {
           </p>
           <div className="mt-3 flex flex-wrap gap-4">
             <img
-              src="/images/chladni-mode-3-4.svg"
+              src="https://dz3nuqtm6hedggvw.public.blob.vercel-storage.com/chladni-mode-3-4.svg"
               alt="Simulated plate mode 3,4 nodal pattern"
               width={360}
               height={360}
@@ -142,8 +142,16 @@ export function AcousticsSection() {
               className="h-auto max-w-full rounded-[10px] border border-[rgba(140,160,180,0.25)] bg-[#1a1f26]"
             />
             <img
-              src="/images/chladni-mode-2-5.svg"
+              src="https://dz3nuqtm6hedggvw.public.blob.vercel-storage.com/chladni-mode-2-5.svg"
               alt="Simulated plate mode 2,5 nodal pattern"
+              width={360}
+              height={360}
+              loading="lazy"
+              className="h-auto max-w-full rounded-[10px] border border-[rgba(140,160,180,0.25)] bg-[#1a1f26]"
+            />
+            <img
+              src="https://dz3nuqtm6hedggvw.public.blob.vercel-storage.com/chladni-mode-4-4.svg"
+              alt="Simulated plate mode 4,4 nodal pattern"
               width={360}
               height={360}
               loading="lazy"

@@ -1,4 +1,5 @@
 import { Reveal } from "../components/Reveal";
+import { UltrasonicLevitationDemo } from "../components/UltrasonicLevitationDemo";
 import { cn } from "@/lib/cn";
 
 /** Decorative hieroglyph texture (Unicode Egyptian Hieroglyphs block; font renders glyphs). */
@@ -55,7 +56,7 @@ export function PyramidsSection() {
           }}
         />
         <p
-          className="absolute -inset-[5%] select-none justify-center break-all text-justify font-hiero text-[clamp(2.2rem,5.5vw,3.8rem)] leading-[1.35] tracking-[0.08em] text-[rgba(20,12,40,0.14)] mix-blend-multiply [transform:rotate(-2deg)_scale(1.02)]"
+          className="absolute -inset-[5%] select-none break-all text-justify font-hiero text-[clamp(2.2rem,5.5vw,3.8rem)] leading-[1.35] tracking-[0.08em] text-[rgba(20,12,40,0.14)] mix-blend-multiply [transform:rotate(-2deg)_scale(1.02)]"
         >
           {HIERO_TEXTURE.repeat(6)}
         </p>
@@ -171,8 +172,13 @@ export function PyramidsSection() {
             <p>
               <strong>Ultrasonic levitation</strong> can suspend <strong>small</strong>{" "}
               objects in controlled setups—very different from music-range sound and from
-              multi-ton masonry.
+              multi-ton masonry. Usually a <strong>standing wave</strong> is formed between
+              opposing high-frequency beams (or a transducer and reflector); light particles
+              sit in stable zones where <strong>acoustic radiation force</strong> balances
+              gravity, spaced by roughly <strong>half a wavelength</strong> (millimeters in
+              air at tens of kHz).
             </p>
+            <UltrasonicLevitationDemo />
           </div>
         </Reveal>
 
