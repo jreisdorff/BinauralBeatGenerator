@@ -124,8 +124,10 @@
 /* —— Hero Earth (front-facing; flat map scroll — avoids 3D-tilt distortion) —— */
 .hero-earth {
   position: relative;
-  width: min(72vw, 300px);
-  height: min(72vw, 300px);
+  width: min(144vw, 600px, 100%);
+  aspect-ratio: 1;
+  height: auto;
+  max-width: 100%;
 }
 
 .hero-earth__glow {
