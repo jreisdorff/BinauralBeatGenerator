@@ -6,7 +6,6 @@
   "description": "SoundLab — Mesopotamian tuning philology, binaural demos, acoustics (Iraq journal corpus, UET VII 74, presets).",
   "scripts": {
     "start": "tsx src/index.ts",
-    "build": "tsc",
     "test": "vitest run",
     "midi:tightening": "tsx src/playTighteningCycle.ts",
     "audio:binaural": "tsx src/exportTighteningBinaural.ts",
@@ -14,10 +13,10 @@
     "audio:preset": "tsx src/runPreset.ts",
     "audio:preset:all": "tsx src/runAllPresets.ts",
     "acoustics:demo": "tsx src/runAcousticsDemo.ts",
-    "web:install": "npm install --prefix web",
-    "web:dev": "npm run dev --prefix web",
-    "web:build": "npm run build --prefix web",
-    "web:copy-assets": "npm run copy-assets --prefix web"
+    "install": "npm install --prefix web",
+    "dev": "npm run dev --prefix web",
+    "build": "npm run build --prefix web",
+    "copy-assets": "npm run copy-assets --prefix web"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
