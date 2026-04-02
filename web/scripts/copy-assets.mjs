@@ -71,7 +71,11 @@ for (const f of other) {
   }
 }
 
-for (const svg of ["chladni-mode-3-4.svg", "chladni-mode-2-5.svg"]) {
+for (const svg of [
+  "chladni-mode-3-4.svg",
+  "chladni-mode-2-5.svg",
+  "chladni-mode-4-4.svg",
+]) {
   const src = join(repoOut, svg);
   const dest = join(pubImg, svg);
   if (existsSync(src)) {

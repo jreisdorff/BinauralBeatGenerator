@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Cinzel, DM_Sans, Noto_Sans_Egyptian_Hieroglyphs } from "next/font/google";
 import "./globals.css";
 
@@ -64,6 +65,7 @@ export default function RootLayout({
       lang="en"
       className={`${dmSans.variable} ${cinzel.variable} ${notoHiero.variable}`}
     >
+     <Analytics />
       <body className={dmSans.className}>{children}</body>
     </html>
   );
