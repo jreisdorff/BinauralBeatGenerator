@@ -6,6 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  output: 'export',
   /** Monorepo: parent has its own lockfile; trace from `web/` only. */
   outputFileTracingRoot: path.join(__dirname),
 };
