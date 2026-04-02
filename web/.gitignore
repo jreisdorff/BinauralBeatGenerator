@@ -1,7 +1,1 @@
 node_modules/
-dist/
-.next/
-out/
-public/audio/*.wav
-public/audio/*.mid
-public/images/chladni-*.svg
