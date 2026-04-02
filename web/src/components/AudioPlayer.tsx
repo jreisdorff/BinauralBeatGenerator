@@ -1,9 +1,31 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { TrackMeta } from "../constants/tracks";
+import { cn } from "@/lib/cn";
 
 type Props = {
   track: TrackMeta;
   variant?: "ancient" | "binaural" | "acoustics";
+};
+
+const shell = {
+  ancient:
+    "max-w-[420px] border border-[rgba(212,175,55,0.45)] bg-[rgba(26,35,126,0.35)] shadow-[0_8px_32px_rgba(0,0,0,0.25)]",
+  binaural:
+    "max-w-[min(100%,480px)] border border-[rgba(255,120,200,0.4)] bg-[rgba(60,20,80,0.45)] shadow-[0_0_24px_rgba(255,0,180,0.15)]",
+  acoustics:
+    "max-w-[420px] border border-[rgba(140,160,180,0.35)] bg-[rgba(55,71,90,0.5)]",
+};
+
+const listenerTone = {
+  ancient: "text-[rgba(244,228,188,0.9)]",
+  binaural: "text-[rgba(255,235,255,0.92)]",
+  acoustics: "text-[rgba(200,215,230,0.95)]",
+};
+
+const seekAccent = {
+  ancient: "accent-[#d4af37]",
+  binaural: "accent-[#ff6ec7]",
+  acoustics: "accent-[#8fa8c2]",
 };
 
 export function AudioPlayer({ track, variant = "ancient" }: Props) {
@@ -68,30 +90,37 @@ export function AudioPlayer({ track, variant = "ancient" }: Props) {
   };
 
   return (
-    <div className={`audio-player audio-player--${variant}`}>
+    <div
+      className={cn(
+        "rounded-xl px-[1.1rem] py-4 backdrop-blur-[8px]",
+        shell[variant],
+      )}
+    >
       <audio ref={ref} src={track.file} preload="metadata" />
-      <div className="audio-player__head">
+      <div className="mb-2 flex items-center gap-3">
         <button
           type="button"
-          className="audio-player__play"
+          className="h-11 w-11 shrink-0 rounded-full border-0 bg-white/15 text-[0.85rem] text-white hover:bg-white/[0.28]"
           onClick={toggle}
           aria-label={playing ? "Pause" : "Play"}
         >
           {playing ? "❚❚" : "▶"}
         </button>
-        <div className="audio-player__meta">
-          <div className="audio-player__title">{track.title}</div>
+        <div className="min-w-0 flex-1">
+          <div className="text-[0.95rem] font-semibold">{track.title}</div>
           {track.subtitle ? (
-            <div className="audio-player__sub">{track.subtitle}</div>
+            <div className="mt-[0.15rem] text-[0.78rem] opacity-85">
+              {track.subtitle}
+            </div>
           ) : null}
         </div>
-        <span className="audio-player__time">
+        <span className="shrink-0 tabular-nums text-[0.72rem] opacity-75">
           {fmt(currentTime)} / {fmt(duration)}
         </span>
       </div>
       <input
         type="range"
-        className="audio-player__seek"
+        className={cn("w-full", seekAccent[variant])}
         min={0}
         max={1}
         step={0.001}
@@ -100,12 +129,20 @@ export function AudioPlayer({ track, variant = "ancient" }: Props) {
         aria-label="Seek"
       />
       {track.listenerNote ? (
-        <p className="audio-player__listener">{track.listenerNote}</p>
+        <p
+          className={cn(
+            "mb-0 mt-[0.65rem] text-[0.76rem] leading-[1.5] opacity-88",
+            listenerTone[variant],
+          )}
+        >
+          {track.listenerNote}
+        </p>
       ) : null}
       {error ? (
-        <p className="audio-player__err">
-          File missing — run <code>npm run copy-assets</code> in <code>web/</code>{" "}
-          after generating WAVs in the repo.
+        <p className="mb-0 mt-2 text-[0.75rem] text-[#ffb4b4] opacity-90">
+          File missing — run <code className="text-[0.7rem]">npm run copy-assets</code>{" "}
+          in <code className="text-[0.7rem]">web/</code> after generating WAVs in the
+          repo.
         </p>
       ) : null}
     </div>

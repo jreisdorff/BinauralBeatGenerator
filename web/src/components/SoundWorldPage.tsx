@@ -9,23 +9,29 @@ import { FooterSection } from "@/sections/FooterSection";
 
 export function SoundWorldPage() {
   return (
-    <div className="app">
-      <nav className="nav-rail" aria-label="Section jump links">
-        <a href="#ancient" className="nav-rail__dot" title="Ancient tuning">
-          <span />
-        </a>
-        <a href="#binaural" className="nav-rail__dot" title="Binaural">
-          <span />
-        </a>
-        <a href="#acoustics" className="nav-rail__dot" title="Acoustics">
-          <span />
-        </a>
-        <a href="#pyramids" className="nav-rail__dot" title="Pyramids & sound">
-          <span />
-        </a>
-        <a href="#more" className="nav-rail__dot" title="More">
-          <span />
-        </a>
+    <div className="relative min-h-screen">
+      <nav
+        className="fixed right-[clamp(0.5rem,2vw,1.25rem)] top-1/2 z-50 flex -translate-y-1/2 flex-col gap-[0.65rem] max-[520px]:hidden"
+        aria-label="Section jump links"
+      >
+        {(
+          [
+            ["#ancient", "Ancient tuning"],
+            ["#binaural", "Binaural"],
+            ["#acoustics", "Acoustics"],
+            ["#pyramids", "Pyramids & sound"],
+            ["#more", "More"],
+          ] as const
+        ).map(([href, title]) => (
+          <a
+            key={href}
+            href={href}
+            className="block p-1 no-underline focus-visible:rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4af37]"
+            title={title}
+          >
+            <span className="block h-2.5 w-2.5 rounded-full border border-white/35 bg-white/25 transition duration-200 ease-out hover:scale-125 hover:bg-[rgba(212,175,55,0.85)] focus-visible:scale-125 focus-visible:bg-[rgba(212,175,55,0.85)]" />
+          </a>
+        ))}
       </nav>
       <main>
         <HeroSection />

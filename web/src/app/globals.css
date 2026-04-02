@@ -1,83 +1,28 @@
-@import "../sections/sections.css";
-@import "../components/AudioPlayer.css";
-@import "../components/BeatFrequencyGuide.css";
-@import "../components/MandalaLayer.css";
-@import "../components/TriangleMesh.css";
-@import "../sections/PyramidsSection.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Base (from former index.css + App.css) */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  line-height: 1.55;
-  background: #0c0c0f;
-  color: #e8e6e3;
-}
-
-.app {
-  position: relative;
-  min-height: 100vh;
-}
-
-.nav-rail {
-  position: fixed;
-  right: clamp(0.5rem, 2vw, 1.25rem);
-  top: 50%;
-  translate: 0 -50%;
-  z-index: 50;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-}
-
-.nav-rail__dot {
-  display: block;
-  padding: 4px;
-  text-decoration: none;
-}
-
-.nav-rail__dot span {
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  transition: transform 0.25s ease, background 0.25s ease;
-}
-
-.nav-rail__dot:hover span,
-.nav-rail__dot:focus-visible span {
-  background: rgba(212, 175, 55, 0.85);
-  transform: scale(1.25);
-}
-
-.nav-rail__dot:focus-visible {
-  outline: 2px solid #d4af37;
-  outline-offset: 2px;
-  border-radius: 50%;
-}
-
-@media (max-width: 520px) {
-  .nav-rail {
-    display: none;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply box-border;
   }
-}
 
-a {
-  color: inherit;
-}
+  html {
+    @apply scroll-smooth;
+  }
 
-button {
-  font: inherit;
-  cursor: pointer;
+  body {
+    @apply m-0 font-sans leading-[1.55] bg-[#0c0c0f] text-[#e8e6e3];
+  }
+
+  a {
+    @apply text-inherit;
+  }
+
+  button {
+    cursor: pointer;
+    font: inherit;
+  }
 }
