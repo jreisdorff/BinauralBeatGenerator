@@ -112,7 +112,7 @@ npm run audio:preset:all
 
 ## Acoustics demo (rooms + Chladni-style SVG)
 
-Explains **sound vs built space** in plain language (evidence vs folklore) and generates **simulations**:
+Explains **sound vs built space** in plain language and generates **simulations**:
 
 ```bash
 npm run acoustics:demo

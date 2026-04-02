@@ -1,0 +1,236 @@
+/* Decorative scene: CSS “relief” pyramids + hieroglyph texture — no raster assets */
+.section--pyramids {
+  position: relative;
+  background: linear-gradient(
+    185deg,
+    #1a0f3e 0%,
+    #2d1b4e 18%,
+    #5c3d2e 42%,
+    #8b6914 58%,
+    #c9a86a 72%,
+    #d4b896 88%,
+    #e8d4b8 100%
+  );
+  color: #f8f0e0;
+  isolation: isolate;
+}
+
+.pyramids-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.pyramids-scene__sky-glow {
+  position: absolute;
+  inset: -20% -10% 35%;
+  background: radial-gradient(
+    ellipse 80% 60% at 72% 18%,
+    rgba(255, 220, 140, 0.45) 0%,
+    rgba(255, 140, 80, 0.12) 35%,
+    transparent 70%
+  );
+}
+
+.pyramids-scene__sun {
+  position: absolute;
+  top: 8%;
+  right: 12%;
+  width: min(18vmin, 120px);
+  height: min(18vmin, 120px);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 35%,
+    #fff8e0 0%,
+    #ffd54f 35%,
+    #ff8f00 70%,
+    transparent 72%
+  );
+  box-shadow: 0 0 60px rgba(255, 200, 100, 0.55);
+  opacity: 0.9;
+}
+
+.pyramids-scene__hieroglyphs {
+  position: absolute;
+  inset: -5%;
+  font-family: "Noto Sans Egyptian Hieroglyphs", "Segoe UI Historic", serif;
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  color: rgba(20, 12, 40, 0.14);
+  text-align: justify;
+  word-break: break-all;
+  transform: rotate(-2deg) scale(1.02);
+  user-select: none;
+  mix-blend-mode: multiply;
+}
+
+.pyramids-scene__ground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 38%;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(92, 71, 48, 0.35) 25%,
+    rgba(74, 55, 38, 0.85) 100%
+  );
+}
+
+.pyramids-scene__dune {
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  right: -10%;
+  height: 22%;
+  background: radial-gradient(
+    ellipse 120% 100% at 50% 100%,
+    rgba(180, 140, 90, 0.5) 0%,
+    transparent 65%
+  );
+}
+
+.pyramids-scene__pyramids {
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: min(4vw, 2.5rem);
+  width: min(96vw, 720px);
+}
+
+/* Stepped “courses” + triangular silhouette */
+.css-pyramid {
+  position: relative;
+  flex-shrink: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    #c4a574 0px,
+    #c4a574 3px,
+    #a68452 3px,
+    #a68452 7px,
+    #8b6f47 7px,
+    #8b6f47 10px
+  );
+  box-shadow: inset -8px 0 24px rgba(0, 0, 0, 0.22),
+    4px 8px 32px rgba(0, 0, 0, 0.35);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.css-pyramid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    transparent 42%,
+    rgba(0, 0, 0, 0.18) 100%
+  );
+  clip-path: inherit;
+  pointer-events: none;
+}
+
+.css-pyramid--khufu {
+  width: min(42vmin, 260px);
+  height: min(36vmin, 220px);
+  margin-bottom: -1px;
+}
+
+.css-pyramid--satellite {
+  width: min(22vmin, 140px);
+  height: min(19vmin, 118px);
+  margin-bottom: 0;
+  opacity: 0.92;
+  filter: brightness(0.94);
+}
+
+.css-pyramid--menkaure {
+  width: min(18vmin, 115px);
+  height: min(15vmin, 95px);
+  margin-bottom: 2px;
+  opacity: 0.88;
+}
+
+.section--pyramids__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pyramids-section__kicker {
+  color: rgba(248, 240, 224, 0.82);
+}
+
+.pyramids-card__h3 {
+  margin-top: 0;
+}
+
+.pyramids-read-list {
+  margin-bottom: 0;
+}
+
+.card--desert-glass {
+  background: rgba(12, 8, 28, 0.55);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card--desert-glass p {
+  margin: 0 0 0.9rem;
+  line-height: 1.65;
+}
+
+.card--desert-glass p:last-child {
+  margin-bottom: 0;
+}
+
+.pyramids-table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  margin: 0.5rem 0 0;
+}
+
+.pyramids-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.pyramids-table th,
+.pyramids-table td {
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  vertical-align: top;
+}
+
+.pyramids-table th {
+  background: rgba(0, 0, 0, 0.35);
+  font-weight: 600;
+  color: #f4e4bc;
+}
+
+.pyramids-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pyramids-doc-ref {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin: 0 0 1.25rem;
+}
+
+.pyramids-doc-ref code {
+  font-size: 0.82em;
+}

@@ -25,8 +25,9 @@ export function FooterSection() {
               <code>npm run acoustics:demo</code>
             </li>
             <li>
-              Read <code>docs/philology-iraq-sources.md</code> and{" "}
-              <code>docs/sound-and-built-environment.md</code>
+              Read <code>docs/philology-iraq-sources.md</code>,{" "}
+              <code>docs/sound-and-built-environment.md</code>, and{" "}
+              <code>docs/pyramids-sound-and-claims.md</code>
             </li>
           </ul>
           <p className="footer-copy">

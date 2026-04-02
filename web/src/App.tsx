@@ -2,6 +2,7 @@ import { HeroSection } from "./sections/HeroSection";
 import { AncientSection } from "./sections/AncientSection";
 import { BinauralSection } from "./sections/BinauralSection";
 import { AcousticsSection } from "./sections/AcousticsSection";
+import { PyramidsSection } from "./sections/PyramidsSection";
 import { FooterSection } from "./sections/FooterSection";
 import "./App.css";
 
@@ -18,6 +19,9 @@ export default function App() {
         <a href="#acoustics" className="nav-rail__dot" title="Acoustics">
           <span />
         </a>
+        <a href="#pyramids" className="nav-rail__dot" title="Pyramids & sound">
+          <span />
+        </a>
         <a href="#more" className="nav-rail__dot" title="More">
           <span />
         </a>
@@ -27,6 +31,7 @@ export default function App() {
         <AncientSection />
         <BinauralSection />
         <AcousticsSection />
+        <PyramidsSection />
         <FooterSection />
       </main>
     </div>
