@@ -55,7 +55,7 @@
 .pyramids-scene__hieroglyphs {
   position: absolute;
   inset: -5%;
-  font-family: "Noto Sans Egyptian Hieroglyphs", "Segoe UI Historic", serif;
+  font-family: var(--font-noto-hiero), "Segoe UI Historic", serif;
   font-size: clamp(2.2rem, 5.5vw, 3.8rem);
   line-height: 1.35;
   letter-spacing: 0.08em;

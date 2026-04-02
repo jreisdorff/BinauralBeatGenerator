@@ -1,7 +1,6 @@
 import { Reveal } from "../components/Reveal";
 import { AudioPlayer } from "../components/AudioPlayer";
 import { ANCIENT_TRACKS, MIDI_DOWNLOAD } from "../constants/tracks";
-import "./sections.css";
 
 export function AncientSection() {
   return (

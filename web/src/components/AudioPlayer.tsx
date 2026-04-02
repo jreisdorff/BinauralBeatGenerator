@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { TrackMeta } from "../constants/tracks";
-import "./AudioPlayer.css";
 
 type Props = {
   track: TrackMeta;

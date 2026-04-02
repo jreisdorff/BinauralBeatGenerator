@@ -1,5 +1,3 @@
-import "./BeatFrequencyGuide.css";
-
 /**
  * Popular-science framing of binaural beat bands — not clinical guidance.
  */

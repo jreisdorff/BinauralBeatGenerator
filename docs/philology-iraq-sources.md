@@ -1,6 +1,6 @@
 # Primary-context philology: Old Babylonian tuning corpus (*Iraq* / related)
 
-This project grounds implementation in the cuneiform **music-theory** tradition published and debated in **Cambridge *Iraq*** and closely linked editions—not in modern “432 Hz” mysticism. **A = 432 Hz** is only a **reference anchor** for code; it is **not** attested on any Mesopotamian tablet.
+This project grounds implementation in the cuneiform **music-theory** tradition published and debated in **Cambridge *Iraq*** and closely linked editions**A = 432 Hz** is only a **reference anchor** for code.
 
 ## 1. Core tablets and articles (Cambridge *Iraq*)
 
@@ -29,7 +29,7 @@ This project grounds implementation in the cuneiform **music-theory** tradition 
 | **Seven distinct steps / modes** | UET VII 74 + duplicates / parallels (incl. UET VI/3 899) | Seven named **tunings**; rotation of the same diatonic set is the usual **modern acoustic** reconstruction. |
 | **Dichord diagnosis** | Modulation texts | Encoded as **`src/tuning/modulationUet74.ts`**: string-pairs treated as hosting the **tritone** (“unclear” interval) in each mode, with **tighten/loosen** steps per **Crickmore 2008** Figs 5–6 (tabulating **UET VII 74**). Spot-check against Gurney / Mirelman & Krispijn when you have PDFs. |
 | **Interval vocabulary** | BM 65217 + 66616; CBS 10996 tradition | **`src/tuning/cbs10996Pairs.ts`**: fourteen string-pairs (**primary** vs **secondary**) from **Crickmore Fig. 2** (Kilmer’s CBS 10996 reading). |
-| **Absolute pitch (Hz)** | *Not in corpus* | Any frequency is **modern convention**; this project uses **A₄ = 432 Hz** only as a **reference** for ratio playback. |
+| **Absolute pitch (Hz)** | ** | Any frequency is **modern convention**; this project uses **A₄ = 432 Hz** only as a **reference** for ratio playback. |
 
 ## 3. Secondary source for encoded modulation steps (UET VII 74)
 

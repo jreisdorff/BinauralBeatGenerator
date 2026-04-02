@@ -5,7 +5,6 @@ import { AudioPlayer } from "../components/AudioPlayer";
 import { BeatFrequencyGuide } from "../components/BeatFrequencyGuide";
 import { MandalaLayer } from "../components/MandalaLayer";
 import { BINAURAL_TRACKS } from "../constants/tracks";
-import "./sections.css";
 
 export function BinauralSection() {
   const [speed, setSpeed] = useState(1);

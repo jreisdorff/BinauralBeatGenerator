@@ -19,7 +19,7 @@ npm start
 
 ## React explorer (scroll page + players)
 
-Single-page app in **`web/`** — sections for Babylonian tuning, binaural/presets, and acoustics, with **Framer Motion** scroll reveals, themed CSS (Egyptian palette, mandala layers, triangular mesh), and **`<audio>`** players.
+Next.js app in **`web/`** (App Router) — sections for Babylonian tuning, binaural/presets, and acoustics, with **Framer Motion** scroll reveals, themed CSS (Egyptian palette, mandala layers, triangular mesh), and **`<audio>`** players.
 
 ```bash
 npm run web:install          # once
@@ -32,7 +32,7 @@ Copy generated samples from the repo `out/` folder into `web/public/` (after you
 npm run web:copy-assets
 ```
 
-Use **headphones** for binaural tracks. Production build: `npm run web:build`.
+Use **headphones** for binaural tracks. Production: `npm run web:build` (outputs to `web/.next`; then `npm run start --prefix web` for a local production server).
 
 ## MIDI (tightening cycle)
 
@@ -140,4 +140,4 @@ npm test
 | `presets/` | Non-historical binaural JSON → `npm run audio:preset` |
 | `docs/sound-and-built-environment.md` | Sound, cities, archaeology: what’s real vs myth |
 | `src/acoustics/` | Room modes + Chladni-style SVG helpers |
-| `web/` | Vite + React scroll UI + audio players |
+| `web/` | Next.js (App Router) scroll UI + audio players |

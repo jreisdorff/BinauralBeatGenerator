@@ -1,12 +1,13 @@
-import { HeroSection } from "./sections/HeroSection";
-import { AncientSection } from "./sections/AncientSection";
-import { BinauralSection } from "./sections/BinauralSection";
-import { AcousticsSection } from "./sections/AcousticsSection";
-import { PyramidsSection } from "./sections/PyramidsSection";
-import { FooterSection } from "./sections/FooterSection";
-import "./App.css";
+"use client";
 
-export default function App() {
+import { HeroSection } from "@/sections/HeroSection";
+import { AncientSection } from "@/sections/AncientSection";
+import { BinauralSection } from "@/sections/BinauralSection";
+import { AcousticsSection } from "@/sections/AcousticsSection";
+import { PyramidsSection } from "@/sections/PyramidsSection";
+import { FooterSection } from "@/sections/FooterSection";
+
+export function SoundLabPage() {
   return (
     <div className="app">
       <nav className="nav-rail" aria-label="Section jump links">

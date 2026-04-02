@@ -1,6 +1,4 @@
 import { Reveal } from "../components/Reveal";
-import "./sections.css";
-import "./PyramidsSection.css";
 
 /** Decorative hieroglyph texture (Unicode Egyptian Hieroglyphs block; font renders glyphs). */
 const HIERO_TEXTURE =
@@ -76,8 +74,7 @@ export function PyramidsSection() {
               For <strong>Egyptian pyramids</strong> specifically, articles sometimes highlight{" "}
               <strong>narrow shafts</strong> or <strong>granite chambers</strong> and speculate about{" "}
               <strong>resonance</strong>. Even when measurements exist, they support claims like{" "}
-              <q>this room rings or sustains certain bands</q>—not automatic proof of how the monument was
-              built.
+              <q>this room rings or sustains certain bands</q>
             </p>
           </div>
         </Reveal>

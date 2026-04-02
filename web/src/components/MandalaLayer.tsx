@@ -1,5 +1,4 @@
 import type { CSSProperties } from "react";
-import "./MandalaLayer.css";
 
 type Props = {
   /** Multiplier for animation duration (higher = slower spin). */

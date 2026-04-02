@@ -5,7 +5,6 @@ import {
   rectangularRoomModes,
   SPEED_OF_SOUND_M_S,
 } from "../lib/roomModes";
-import "./sections.css";
 
 export function AcousticsSection() {
   const [L, setL] = useState(12);

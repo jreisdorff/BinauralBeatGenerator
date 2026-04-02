@@ -20,13 +20,13 @@
 }
 
 .section__title--serif {
-  font-family: "Cinzel", Georgia, "Times New Roman", serif;
+  font-family: var(--font-cinzel), Georgia, "Times New Roman", serif;
   color: #f4e4bc;
   text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
 }
 
 .section__title--psyche {
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
   background: linear-gradient(120deg, #fff, #ff9ecd, #9bf6ff);
   -webkit-background-clip: text;
   background-clip: text;
@@ -116,7 +116,7 @@
 }
 
 .hero__title {
-  font-family: "Cinzel", Georgia, serif;
+  font-family: var(--font-cinzel), Georgia, serif;
   font-size: clamp(2rem, 5.5vw, 3.2rem);
   font-weight: 600;
   margin: 0 0 1rem;

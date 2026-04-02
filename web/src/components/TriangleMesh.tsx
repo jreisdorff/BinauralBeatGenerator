@@ -1,5 +1,3 @@
-import "./TriangleMesh.css";
-
 export function TriangleMesh() {
   return (
     <div className="tri-mesh" aria-hidden>
