@@ -13,7 +13,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h1 className="hero__eyebrow">SoundWorld · interactive tour</h1>
+          <h1>SoundWorld</h1>
           <p className="hero__lead">
             Scroll through what this repository explores: Mesopotamian tuning theory,
             binaural experiments, and room acoustics — with players where we have WAV

@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 
 /**
- * Rotating globe: equirectangular texture slides inside a circular mask (no extra deps).
- * Texture: NASA Visible Earth composite via Wikimedia Commons (public domain).
+ * 3D-tilted globe: perspective + oblique axis, texture scroll simulates daily rotation.
+ * Texture: equirectangular Earth (Wikimedia Commons, public domain).
  */
 export function HeroEarth() {
   return (
@@ -16,10 +16,14 @@ export function HeroEarth() {
       aria-hidden
     >
       <div className="hero-earth__glow" />
-      <div className="hero-earth__stage">
-        <div className="hero-earth__sphere">
-          <div className="hero-earth__map" />
-          <div className="hero-earth__terminator" />
+      <div className="hero-earth__pivot">
+        <div className="hero-earth__axis">
+          <div className="hero-earth__stage">
+            <div className="hero-earth__sphere">
+              <div className="hero-earth__map" />
+              <div className="hero-earth__terminator" />
+            </div>
+          </div>
         </div>
       </div>
     </motion.div>

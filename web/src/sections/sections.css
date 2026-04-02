@@ -121,34 +121,58 @@
   }
 }
 
-/* —— Hero Earth (equirectangular scroll inside sphere mask) —— */
+/* —— Hero Earth (3D tilt + equirectangular scroll) —— */
 .hero-earth {
   position: relative;
-  width: min(72vw, 320px);
-  height: min(72vw, 320px);
+  width: min(82vw, 380px);
+  height: min(82vw, 380px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-earth__glow {
   position: absolute;
-  inset: -12%;
+  inset: 4%;
   border-radius: 50%;
   background: radial-gradient(
     circle at 35% 30%,
-    rgba(120, 180, 255, 0.25) 0%,
-    rgba(40, 80, 160, 0.08) 45%,
-    transparent 70%
+    rgba(120, 180, 255, 0.32) 0%,
+    rgba(40, 80, 160, 0.1) 42%,
+    transparent 68%
   );
-  filter: blur(12px);
+  filter: blur(16px);
   pointer-events: none;
+  transform: rotateX(22deg) rotateY(-20deg) rotateZ(8deg);
+  transform-origin: center center;
+}
+
+.hero-earth__pivot {
+  position: relative;
+  width: min(70vw, 300px);
+  height: min(70vw, 300px);
+  perspective: min(1100px, 140vw);
+  perspective-origin: 48% 42%;
+}
+
+.hero-earth__axis {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  /* Oblique axis: ~obliquity + orbit yaw so poles aren’t vertical on screen */
+  transform: rotateX(26deg) rotateY(-24deg) rotateZ(11deg);
+  transform-origin: center center;
 }
 
 .hero-earth__stage {
   position: relative;
   width: 100%;
   height: 100%;
+  transform-style: preserve-3d;
   border-radius: 50%;
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55),
-    0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.07) inset,
+    12px 0 48px rgba(0, 0, 0, 0.35);
 }
 
 .hero-earth__sphere {
@@ -158,6 +182,8 @@
   border-radius: 50%;
   overflow: hidden;
   background: #0a1628;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 /* NASA Blue Marble–style composite (Wikimedia, public domain) */
