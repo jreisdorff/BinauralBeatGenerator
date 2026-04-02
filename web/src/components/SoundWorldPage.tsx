@@ -7,7 +7,7 @@ import { AcousticsSection } from "@/sections/AcousticsSection";
 import { PyramidsSection } from "@/sections/PyramidsSection";
 import { FooterSection } from "@/sections/FooterSection";
 
-export function SoundLabPage() {
+export function SoundWorldPage() {
   return (
     <div className="app">
       <nav className="nav-rail" aria-label="Section jump links">

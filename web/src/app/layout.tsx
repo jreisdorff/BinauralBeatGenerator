@@ -22,10 +22,36 @@ const notoHiero = Noto_Sans_Egyptian_Hieroglyphs({
   display: "swap",
 });
 
+const siteDescription =
+  "Scroll through an interactive SoundWorld tour: hear the Old Babylonian tightening cycle (binaural WAV + MIDI download), explore binaural presets with per-track listener notes and a beat-frequency guide, tweak rectangular room modes and Chladni-style plate previews, and read a short, evidence-minded take on pyramids and sound. Use headphones for binaural tracks.";
+
 export const metadata: Metadata = {
-  title: "SoundLab",
-  description:
-    "Mesopotamian tuning theory, binaural experiments, and room acoustics — interactive tour.",
+  title: {
+    default: "SoundWorld",
+    template: "%s · SoundWorld",
+  },
+  description: siteDescription,
+  keywords: [
+    "binaural beats",
+    "Mesopotamian music",
+    "UET VII 74",
+    "room acoustics",
+    "archaeoacoustics",
+    "Chladni",
+    "sound and pyramids",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "SoundWorld",
+    title: "SoundWorld — tablets, listening, and acoustics",
+    description: siteDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SoundWorld — tablets, listening, and acoustics",
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({

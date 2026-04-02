@@ -1,5 +1,5 @@
 /**
- * Run a binaural preset from presets/<PRESET>.json (non-historical / experimental).
+ * Run a binaural preset from presets/<PRESET>.json ( / experimental).
  * Env vars override JSON when set (same names as audio:beat).
  *
  *   PRESET=a432-carrier-6hz-beat npm run audio:preset

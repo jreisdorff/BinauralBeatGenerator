@@ -1,4 +1,4 @@
-# Presets (non-historical)
+# Presets ()
 
 These JSON files drive **`npm run audio:preset`**. They are **not** from Old Babylonian tablets, Cambridge *Iraq* philology, or verifiable ancient tuning data. They exist so you can quickly render **headphone binaural** experiments (432 Hz culture, popular “solfeggio” numbers, internet chakra Hz tables) **without mixing those claims into** `docs/philology-iraq-sources.md`.
 

@@ -84,7 +84,7 @@ export function summarizePhilology(): string {
     "  CARRIER_HZ=220 BEAT_HZ=6 DURATION_SEC=600 npm run audio:beat",
     "  BEAT_HZ=40 BEAT_END=1 DURATION_SEC=120 npm run audio:beat  (linear sweep)",
     "",
-    "Presets (non-historical): PRESET=solfeggio-528 npm run audio:preset  (see presets/README.md)",
+    "Presets (): PRESET=solfeggio-528 npm run audio:preset  (see presets/README.md)",
     "  npm run audio:preset:all  — render every presets/*.json",
     "",
     "Acoustics (rooms / Chladni pedagogy): npm run acoustics:demo  → docs/sound-and-built-environment.md",

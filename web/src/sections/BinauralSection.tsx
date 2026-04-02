@@ -35,7 +35,7 @@ export function BinauralSection() {
             <p>
               Each ear gets a sin(e) tone; the <strong>difference in Hz</strong> is what
               many people perceive as a “beat.” Presets under <code>presets/</code> are
-              labeled <strong>non-historical</strong> (432 culture, solfeggio lists,
+              labeled <strong></strong> (432 culture, solfeggio lists,
                chakra tables).
             </p>
           </div>

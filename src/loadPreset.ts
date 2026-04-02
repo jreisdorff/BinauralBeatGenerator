@@ -1,5 +1,5 @@
 /**
- * Load non-historical / experimental binaural presets from presets/*.json
+ * Load  / experimental binaural presets from presets/*.json
  */
 
 import { readFileSync, readdirSync } from "node:fs";

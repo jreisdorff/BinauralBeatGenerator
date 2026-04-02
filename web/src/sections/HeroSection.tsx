@@ -10,7 +10,7 @@ export function HeroSection() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       >
-        <p className="hero__eyebrow">SoundLab · interactive tour</p>
+        <p className="hero__eyebrow">SoundWorld · interactive tour</p>
         <h1 className="hero__title">Sound, tablets, and listening</h1>
         <p className="hero__lead">
           Scroll through what this repository explores: Mesopotamian tuning theory,

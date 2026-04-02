@@ -95,7 +95,7 @@ OUT=out/my-beat.wav npm run audio:beat
 
 ## Presets (432 / “solfeggio” / chakra  — **not** ancient Babylon)
 
-JSON under **`presets/`** is explicitly **non-historical**: quick binaural experiments without mixing those ideas into the philology doc. Each file includes a **`disclaimer`** field.
+JSON under **`presets/`** is explicitly ****: quick binaural experiments without mixing those ideas into the philology doc. Each file includes a **`disclaimer`** field.
 
 ```bash
 PRESET=solfeggio-528 npm run audio:preset
@@ -137,7 +137,7 @@ npm test
 | `src/midi/` | MIDI export |
 | `src/audio/` | Binaural WAV synthesis |
 | `out/` | Generated `.mid` / `.wav` (gitignored) |
-| `presets/` | Non-historical binaural JSON → `npm run audio:preset` |
+| `presets/` |  binaural JSON → `npm run audio:preset` |
 | `docs/sound-and-built-environment.md` | Sound, cities, archaeology: what’s real vs myth |
 | `src/acoustics/` | Room modes + Chladni-style SVG helpers |
 | `web/` | Next.js (App Router) scroll UI + audio players |
