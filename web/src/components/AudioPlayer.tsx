@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { GITHUB_REPO_URL } from "@/constants/repo";
 import type { TrackMeta } from "../constants/tracks";
 import { cn } from "@/lib/cn";
 
@@ -141,8 +142,16 @@ export function AudioPlayer({ track, variant = "ancient" }: Props) {
       {error ? (
         <p className="mb-0 mt-2 text-[0.75rem] text-[#ffb4b4] opacity-90">
           File missing — run <code className="text-[0.7rem]">npm run copy-assets</code>{" "}
-          in <code className="text-[0.7rem]">web/</code> after generating WAVs in the
-          repo.
+          in <code className="text-[0.7rem]">web/</code> after generating WAVs in the{" "}
+          <a
+            href={GITHUB_REPO_URL}
+            className="underline underline-offset-2 hover:opacity-100"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub repository
+          </a>
+          .
         </p>
       ) : null}
     </div>

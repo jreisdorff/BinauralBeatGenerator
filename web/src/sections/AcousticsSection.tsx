@@ -1,5 +1,10 @@
+"use client";
+
 import { useMemo, useState } from "react";
+import { GITHUB_REPO_URL } from "@/constants/repo";
 import { Reveal } from "../components/Reveal";
+import { SnareRoomPlayButton } from "../components/SnareRoomPlayButton";
+import { TechWalkthroughLink } from "../components/TechWalkthroughLink";
 import { TriangleMesh } from "../components/TriangleMesh";
 import {
   rectangularRoomModes,
@@ -29,9 +34,17 @@ export function AcousticsSection() {
       <TriangleMesh />
       <div className="relative z-[1] mx-auto max-w-[920px]">
         <Reveal>
-          <h2 className="mb-2 text-[clamp(1.75rem,4vw,2.6rem)] font-bold tracking-[-0.02em]">
-            Room modes & patterns
-          </h2>
+          <div className="mb-2 flex flex-wrap items-start justify-between gap-3">
+            <h2 className="text-[clamp(1.75rem,4vw,2.6rem)] font-bold tracking-[-0.02em]">
+              Room modes & patterns
+            </h2>
+            <TechWalkthroughLink
+              segment="acoustics"
+              className="mt-1 shrink-0 rounded-full border border-[rgba(143,168,194,0.45)] bg-[rgba(0,0,0,0.2)] px-3 py-1.5 text-[0.72rem] font-semibold uppercase tracking-wide text-[#d8dee6] no-underline hover:border-[#8fa8c2]/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8fa8c2]"
+            >
+              Tech notes
+            </TechWalkthroughLink>
+          </div>
           <p className="mb-7 text-[0.95rem] text-[#a8b8c8] opacity-[0.88]">
             Ideal box · {SPEED_OF_SOUND_M_S} m/s · pedagogy
           </p>
@@ -91,6 +104,7 @@ export function AcousticsSection() {
                 />
               </label>
             </div>
+            <SnareRoomPlayButton lengthM={L} widthM={W} heightM={H} />
             <div className="max-h-[280px] overflow-x-auto overflow-y-auto rounded-[10px] border border-[rgba(140,160,180,0.2)]">
               <table className="w-full border-collapse text-[0.82rem]">
                 <thead>
@@ -130,7 +144,16 @@ export function AcousticsSection() {
           <h3 className="mb-3 mt-8 text-[1.15rem]">Chladni-style preview (from repo demo)</h3>
           <p className="mb-4 max-w-[52ch] text-[0.85rem] leading-normal opacity-[0.85] [&_code]:text-[0.8em]">
             Run <code>npm run acoustics:demo</code> then{" "}
-            <code>npm run copy-assets</code> in <code>web/</code> to refresh SVGs.
+            <code>npm run copy-assets</code> in <code>web/</code> to refresh SVGs (
+            <a
+              href={GITHUB_REPO_URL}
+              className="underline decoration-[rgba(140,160,180,0.5)] underline-offset-2 hover:decoration-[rgba(212,175,55,0.75)]"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub repo
+            </a>
+            ).
           </p>
           <div className="mt-3 flex flex-wrap gap-4">
             <img

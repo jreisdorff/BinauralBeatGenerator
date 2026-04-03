@@ -1,5 +1,6 @@
 import { Reveal } from "../components/Reveal";
 import { UltrasonicLevitationDemo } from "../components/UltrasonicLevitationDemo";
+import { TechWalkthroughLink } from "../components/TechWalkthroughLink";
 import { cn } from "@/lib/cn";
 
 /** Decorative hieroglyph texture (Unicode Egyptian Hieroglyphs block; font renders glyphs). */
@@ -92,12 +93,20 @@ export function PyramidsSection() {
 
       <div className="relative z-[1] mx-auto max-w-[900px]">
         <Reveal>
-          <h2
-            id="pyramids-heading"
-            className="mb-2 font-cinzel text-[clamp(1.75rem,4vw,2.6rem)] font-bold tracking-[-0.02em] text-[#f4e4bc] [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]"
-          >
-            Pyramids &amp; sound
-          </h2>
+          <div className="mb-2 flex flex-wrap items-start justify-between gap-3">
+            <h2
+              id="pyramids-heading"
+              className="font-cinzel text-[clamp(1.75rem,4vw,2.6rem)] font-bold tracking-[-0.02em] text-[#f4e4bc] [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]"
+            >
+              Pyramids &amp; sound
+            </h2>
+            <TechWalkthroughLink
+              segment="pyramids"
+              className="mt-1 shrink-0 rounded-full border border-[rgba(212,175,55,0.45)] bg-[rgba(12,8,28,0.45)] px-3 py-1.5 text-[0.72rem] font-semibold uppercase tracking-wide text-[#f4e4bc] no-underline hover:bg-[rgba(212,175,55,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4af37]"
+            >
+              Tech notes
+            </TechWalkthroughLink>
+          </div>
           <p className="mb-7 text-[0.95rem] text-[rgba(248,240,224,0.82)]">
             From <code className="text-[0.82em]">docs/pyramids-sound-and-claims.md</code>
           </p>

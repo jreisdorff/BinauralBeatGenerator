@@ -5,6 +5,7 @@ import { AudioPlayer } from "../components/AudioPlayer";
 import { BeatFrequencyGuide } from "../components/BeatFrequencyGuide";
 import { MandalaLayer } from "../components/MandalaLayer";
 import { BINAURAL_TRACKS } from "../constants/tracks";
+import { TechWalkthroughLink } from "../components/TechWalkthroughLink";
 
 export function BinauralSection() {
   const [speed, setSpeed] = useState(1);
@@ -18,9 +19,17 @@ export function BinauralSection() {
       <MandalaLayer speedScale={1 / Math.max(0.35, speed)} />
       <div className="relative z-[1] mx-auto max-w-[900px]">
         <Reveal>
-          <h2 className="mb-2 bg-gradient-to-r from-white via-[#ff9ecd] to-[#9bf6ff] bg-clip-text text-[clamp(1.75rem,4vw,2.6rem)] font-bold tracking-[-0.02em] text-transparent drop-shadow-[0_0_20px_rgba(255,0,180,0.35)]">
-            Binaural beats & presets
-          </h2>
+          <div className="mb-2 flex flex-wrap items-start justify-between gap-3">
+            <h2 className="bg-gradient-to-r from-white via-[#ff9ecd] to-[#9bf6ff] bg-clip-text text-[clamp(1.75rem,4vw,2.6rem)] font-bold tracking-[-0.02em] text-transparent drop-shadow-[0_0_20px_rgba(255,0,180,0.35)]">
+              Binaural beats & presets
+            </h2>
+            <TechWalkthroughLink
+              segment="binaural"
+              className="mt-1 shrink-0 rounded-full border border-[rgba(255,158,220,0.45)] bg-[rgba(0,0,0,0.25)] px-3 py-1.5 text-[0.72rem] font-semibold uppercase tracking-wide text-[#fce8ff] no-underline hover:border-[#ff6ec7]/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff6ec7]"
+            >
+              Tech notes
+            </TechWalkthroughLink>
+          </div>
           <p className="mb-7 text-[0.95rem] text-[#e8d4ff] opacity-[0.88]">
             Headphones · interaural pitch offset · explore carriers & beats
           </p>

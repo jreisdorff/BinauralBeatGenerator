@@ -1,4 +1,5 @@
 import { Reveal } from "../components/Reveal";
+import { TechWalkthroughLink } from "../components/TechWalkthroughLink";
 import { AudioPlayer } from "../components/AudioPlayer";
 import { ANCIENT_TRACKS, MIDI_DOWNLOAD } from "../constants/tracks";
 
@@ -23,9 +24,17 @@ export function AncientSection() {
       />
       <div className="relative z-[1] mx-auto max-w-[900px] text-[#f4e4bc]">
         <Reveal>
-          <h2 className="mb-2 font-cinzel text-[clamp(1.75rem,4vw,2.6rem)] font-bold tracking-[-0.02em] text-[#f4e4bc] [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]">
-            Old Babylonian tuning
-          </h2>
+          <div className="mb-2 flex flex-wrap items-start justify-between gap-3">
+            <h2 className="font-cinzel text-[clamp(1.75rem,4vw,2.6rem)] font-bold tracking-[-0.02em] text-[#f4e4bc] [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]">
+              Old Babylonian tuning
+            </h2>
+            <TechWalkthroughLink
+              segment="ancient"
+              className="mt-1 shrink-0 rounded-full border border-[rgba(212,175,55,0.45)] bg-[rgba(0,0,0,0.2)] px-3 py-1.5 text-[0.72rem] font-semibold uppercase tracking-wide text-[#f4e4bc]/95 no-underline hover:bg-[rgba(212,175,55,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#d4af37]"
+            >
+              Tech notes
+            </TechWalkthroughLink>
+          </div>
           <p className="mb-7 text-[0.95rem] opacity-[0.88]">
             Philology first · Cambridge <em>Iraq</em> corpus
           </p>

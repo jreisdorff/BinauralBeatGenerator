@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { Cinzel, DM_Sans, Noto_Sans_Egyptian_Hieroglyphs } from "next/font/google";
+import {
+  Cinzel,
+  Cormorant_Garamond,
+  DM_Sans,
+  Noto_Sans_Egyptian_Hieroglyphs,
+} from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -20,6 +25,15 @@ const notoHiero = Noto_Sans_Egyptian_Hieroglyphs({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-noto-hiero",
+  display: "swap",
+});
+
+/** Soft display for Calm sound section (italic reads gently script-like, still very readable). */
+const cormorantCalm = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-calm-display",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -63,7 +77,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${cinzel.variable} ${notoHiero.variable}`}
+      className={`${dmSans.variable} ${cinzel.variable} ${notoHiero.variable} ${cormorantCalm.variable}`}
     >
      <Analytics />
       <body className={dmSans.className}>{children}</body>

@@ -1,0 +1,365 @@
+/* Strict monochrome + monospace. No accent colors. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", Courier, "Liberation Mono", monospace;
+  background: #fff;
+  color: #000;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+a.doc-md-link {
+  text-decoration: underline;
+}
+
+a.doc-md-link code {
+  font-family: inherit;
+}
+
+.doc-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  border-bottom: 2px solid #000;
+  padding: 0.75rem 1rem 1rem;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+.brand {
+  font-weight: bold;
+  margin-bottom: 0.65rem;
+  letter-spacing: 0.02em;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  align-items: center;
+  font-size: 0.82rem;
+}
+
+.nav-sep {
+  user-select: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  border: 1px solid transparent;
+  padding: 0.15rem 0.35rem;
+}
+
+.nav-link:hover {
+  border-color: #000;
+  font-weight: normal;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  border: 1px solid #000;
+  text-decoration: none;
+}
+
+.doc-main {
+  flex: 1;
+  max-width: 52rem;
+  padding: 1.5rem 1rem 3rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.doc-main h1 {
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+  font-weight: bold;
+}
+
+.doc-main h2 {
+  font-size: 1.05rem;
+  margin: 2rem 0 0.65rem;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.2rem;
+}
+
+.doc-main h3 {
+  font-size: 0.95rem;
+  margin: 1.25rem 0 0.5rem;
+  font-weight: bold;
+}
+
+.doc-main p {
+  margin: 0 0 0.85rem;
+  max-width: 48rem;
+}
+
+.doc-main ul,
+.doc-main ol {
+  margin: 0 0 0.85rem;
+  padding-left: 1.35rem;
+  max-width: 48rem;
+}
+
+.doc-main li {
+  margin-bottom: 0.35rem;
+}
+
+.math-block {
+  margin: 1rem 0;
+  padding: 0.75rem 0;
+  overflow-x: auto;
+  border-left: 3px solid #000;
+  padding-left: 1rem;
+}
+
+.math-block .katex {
+  font-size: 1.05em;
+}
+
+.math-block .katex-display {
+  margin: 0;
+}
+
+.math-inline .katex {
+  font-size: 1em;
+}
+
+/* KaTeX ships subtle grays; force monochrome for this app */
+.katex,
+.katex * {
+  color: #000 !important;
+}
+
+.katex .mord,
+.katex .mop,
+.katex .mbin,
+.katex .mrel,
+.katex .mopen,
+.katex .mclose,
+.katex .mpunct,
+.katex .minner {
+  color: #000 !important;
+}
+
+.code-fig {
+  margin: 1rem 0;
+  border: 1px solid #000;
+}
+
+.code-fig figcaption {
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid #000;
+  font-size: 0.78rem;
+  font-weight: bold;
+}
+
+.code-fig pre {
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  overflow-x: auto;
+  font-family: inherit;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  background: #fff;
+  color: #000;
+}
+
+.code-fig code {
+  font-family: inherit;
+  white-space: pre;
+}
+
+.note {
+  border: 1px dashed #000;
+  padding: 0.65rem 0.75rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+
+table.simple {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin: 1rem 0;
+}
+
+table.simple th,
+table.simple td {
+  border: 1px solid #000;
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.simple th {
+  font-weight: bold;
+}
+
+.doc-preview-nav {
+  font-size: 0.85rem;
+  margin: 0 0 1rem;
+}
+
+.doc-preview-title {
+  margin-bottom: 0.5rem;
+}
+
+.doc-preview-note {
+  font-size: 0.82rem;
+  margin: 0 0 1.25rem;
+  max-width: 48rem;
+}
+
+/* --- Rendered markdown (monochrome) --- */
+.markdown-preview {
+  max-width: 48rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  border: 1px solid #000;
+  padding: 1rem 1.15rem 1.5rem;
+}
+
+.markdown-preview h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #000;
+}
+
+.markdown-preview h2 {
+  font-size: 1.02rem;
+  font-weight: bold;
+  margin: 1.35rem 0 0.5rem;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.15rem;
+}
+
+.markdown-preview h3 {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin: 1.1rem 0 0.4rem;
+}
+
+.markdown-preview h4,
+.markdown-preview h5,
+.markdown-preview h6 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0.85rem 0 0.35rem;
+}
+
+.markdown-preview p {
+  margin: 0 0 0.75rem;
+  max-width: none;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  margin: 0 0 0.75rem;
+  padding-left: 1.35rem;
+}
+
+.markdown-preview li {
+  margin-bottom: 0.35rem;
+}
+
+.markdown-preview li > p {
+  margin-bottom: 0.35rem;
+}
+
+.markdown-preview blockquote {
+  margin: 0.75rem 0;
+  padding: 0.35rem 0 0.35rem 0.85rem;
+  border-left: 3px solid #000;
+}
+
+.markdown-preview hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 1.25rem 0;
+}
+
+.markdown-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.markdown-preview th,
+.markdown-preview td {
+  border: 1px solid #000;
+  padding: 0.35rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.markdown-preview th {
+  font-weight: bold;
+}
+
+.markdown-preview pre {
+  margin: 0.75rem 0;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #000;
+  overflow-x: auto;
+  font-family: inherit;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  background: #fff;
+}
+
+.markdown-preview code {
+  font-family: inherit;
+  font-size: 0.9em;
+}
+
+.markdown-preview p code,
+.markdown-preview li code {
+  padding: 0.05rem 0.2rem;
+  border: 1px solid #000;
+}
+
+.markdown-preview pre code {
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.markdown-preview .katex-display {
+  margin: 0.75rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}

@@ -1,14 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { cn } from "@/lib/cn";
 
 const EARTH =
   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Equirectangular_projection_SW.jpg/1600px-Equirectangular_projection_SW.jpg";
 
-export function HeroEarth() {
+type Props = {
+  className?: string;
+};
+
+export function HeroEarth({ className }: Props) {
   return (
     <motion.div
-      className="relative aspect-square w-[min(144vw,600px,100%)] max-w-full"
+      className={cn(
+        "relative aspect-square w-full max-w-[min(420px,88vw)] lg:max-w-[min(380px,42vw)]",
+        className,
+      )}
       initial={{ opacity: 0, scale: 0.92 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
